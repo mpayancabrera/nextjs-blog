@@ -1,9 +1,9 @@
 import Layout from "../../components/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styled from "styled-components";
+import { getPost, getPostList } from "lib/api";
 
 const H1 = styled.h1`
   font-size: 2rem;
@@ -43,15 +43,15 @@ export default function Post({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
+  const list = await getPostList();
   return {
-    paths,
+    paths: list.map((post: any) => `/post/${post.id}`),
     fallback: false,
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params!.id as string);
+  const postData = await getPost(params!.id as string);
   return {
     props: {
       postData,

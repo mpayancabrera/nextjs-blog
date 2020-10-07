@@ -1,3 +1,5 @@
+import { createGlobalStyle } from "styled-components";
+const GlobalStyle = createGlobalStyle`
 html,
 body {
   padding: 0;
@@ -25,3 +27,16 @@ img {
   max-width: 100%;
   display: block;
 }
+
+span, time {
+  color: #666;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+`;
+
+export default GlobalStyle;

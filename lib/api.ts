@@ -1,19 +1,14 @@
 const fetchAPI = async (query: any, { variables }: any = {}) => {
-  const res = await fetch(
-    `${
-      process.env.API_URL
-    }/graphql`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    }
-  );
+  const res = await fetch(`${process.env.API_URL}/graphql`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  });
 
   const json = await res.json();
   if (json.errors) {

@@ -34,6 +34,7 @@ const Home = ({
     title: string;
     id: string;
     author: string;
+    published_at: string;
   }[];
 }) => {
   return (
@@ -51,14 +52,14 @@ const Home = ({
       <Section>
         <h2>Blog</h2>
         <List>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, published_at, title }) => (
             <ListItem key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
               <small>
-                <Date dateString={date} />
+                <Date dateString={published_at} />
               </small>
             </ListItem>
           ))}
@@ -71,7 +72,7 @@ const Home = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getPostList();
+  const allPostsData = await getPostList();
   return {
     props: {
       allPostsData,

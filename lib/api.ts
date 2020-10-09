@@ -33,6 +33,9 @@ export const getPostList = async () => {
           url
           alternativeText
         }
+        created_at
+        updated_at
+        published_at
       }
     }`);
   return data.posts;

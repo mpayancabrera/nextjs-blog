@@ -16,6 +16,7 @@ const H1 = styled.h1`
 const Img = styled.img`
   width: 100%;
   height: auto;
+  margin: 2rem 0;
 `;
 
 export default function Post({

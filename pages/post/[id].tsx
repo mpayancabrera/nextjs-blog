@@ -19,6 +19,10 @@ export default function Post({
   postData: {
     title: string;
     published_at: string;
+    image: {
+      url: string;
+      alternativeText: string;
+    };
     author: string;
     content: string;
   };
@@ -36,6 +40,14 @@ export default function Post({
             <span>Author: {postData.author}</span>
           </div>
         </div>
+        {postData.image && (
+          <div>
+            <img
+              src={postData.image.url}
+              alt={postData.image.alternativeText}
+            />
+          </div>
+        )}
         <div dangerouslySetInnerHTML={{ __html: postData.content }} />
       </article>
     </Layout>

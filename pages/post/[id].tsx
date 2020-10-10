@@ -18,9 +18,9 @@ export default function Post({
 }: {
   postData: {
     title: string;
-    date: string;
+    published_at: string;
     author: string;
-    contentHtml: string;
+    content: string;
   };
 }) {
   return (
@@ -31,12 +31,12 @@ export default function Post({
       <article>
         <H1>{postData.title}</H1>
         <div>
-          <Date dateString={postData.date} />
+          <Date dateString={postData.published_at} />
           <div>
             <span>Author: {postData.author}</span>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
       </article>
     </Layout>
   );

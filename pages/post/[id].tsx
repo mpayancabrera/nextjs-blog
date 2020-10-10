@@ -13,6 +13,11 @@ const H1 = styled.h1`
   margin: 1rem 0;
 `;
 
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
 export default function Post({
   postData,
 }: {
@@ -42,7 +47,7 @@ export default function Post({
         </div>
         {postData.image && postData.image.url !== "" && (
           <div>
-            <img
+            <Img
               src={postData.image.url}
               alt={postData.image.alternativeText}
             />

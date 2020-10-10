@@ -40,7 +40,7 @@ export default function Post({
             <span>Author: {postData.author}</span>
           </div>
         </div>
-        {postData.image && (
+        {postData.image && postData.image.url !== "" && (
           <div>
             <img
               src={postData.image.url}

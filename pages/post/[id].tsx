@@ -32,6 +32,7 @@ export default function Post({
     content: string;
   };
 }) {
+  console.log(postData.image);
   return (
     <Layout>
       <Head>

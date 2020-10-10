@@ -54,7 +54,7 @@ const Home = ({
         <List>
           {allPostsData.map(({ id, published_at, title }) => (
             <ListItem key={id}>
-              <Link href={`/posts/${id}`}>
+              <Link href={`/post/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />

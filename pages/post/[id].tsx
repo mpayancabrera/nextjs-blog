@@ -47,7 +47,7 @@ export default function Post({
             <span>Author: {postData.author}</span>
           </div>
         </div>
-        {postData.image && postData.image[0].url !== "" && (
+        {postData.image[0] && postData.image[0].url !== "" && (
           <div>
             <Img
               src={postData.image[0].url}

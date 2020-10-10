@@ -24,15 +24,16 @@ export default function Post({
   postData: {
     title: string;
     published_at: string;
-    image: {
-      url: string;
-      alternativeText: string;
-    };
+    image: [
+      {
+        url: string;
+        alternativeText: string;
+      }
+    ];
     author: string;
     content: string;
   };
 }) {
-  console.log(postData.image.url);
   return (
     <Layout>
       <Head>
@@ -46,11 +47,11 @@ export default function Post({
             <span>Author: {postData.author}</span>
           </div>
         </div>
-        {postData.image && postData.image.url !== "" && (
+        {postData.image && postData.image[0].url !== "" && (
           <div>
             <Img
-              src={postData.image.url}
-              alt={postData.image.alternativeText}
+              src={postData.image[0].url}
+              alt={postData.image[0].alternativeText}
             />
           </div>
         )}

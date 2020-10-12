@@ -22,7 +22,7 @@ const Section = styled.section`
 `;
 
 const introduction =
-  "Hi everyone! Thanks for visiting this page, I want to show how to build a personal blog with JAMstack ecosystem using Next and Strapi.";
+  "Hi everyone! Thanks for visiting this page, I want to show how to build a personal blog with JAMstack ecosystem using Next.js and Strapi.";
 const referPage =
   "If you want to know more about which is JAMstack, you can visit the following resources: ";
 

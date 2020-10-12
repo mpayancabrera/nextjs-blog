@@ -57,7 +57,6 @@ export default function Post({
             />
           </div>
         )}
-        {/* <div dangerouslySetInnerHTML={{ __html: postData.content }} /> */}
         <ReactMarkdown source={postData.content} />
       </article>
     </Layout>

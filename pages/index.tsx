@@ -24,7 +24,7 @@ const Section = styled.section`
 const introduction =
   "Hi everyone! Thanks for visiting this page, I want to show how to build a personal blog with JAMstack ecosystem using Next and Strapi.";
 const referPage =
-  "If you want to know more about my profile, you can visit my personal page in ";
+  "If you want to know more about which is JAMstack, you can visit the following resources: ";
 
 const Home = ({
   allPostsData,
@@ -44,10 +44,6 @@ const Home = ({
       </Head>
       <Section>
         <p>{introduction}</p>
-        <p>
-          ({referPage}
-          <a href="https://manuelpayan.com">Manuel Payán Cabrera</a>.)
-        </p>
       </Section>
       <Section>
         <h2>Blog</h2>
@@ -64,6 +60,37 @@ const Home = ({
             </ListItem>
           ))}
         </List>
+      </Section>
+      <Section>
+        <p>{referPage}</p>
+        <ul>
+          <li>
+            <a href="https://www.netlify.com/pdf/oreilly-modern-web-development-on-the-jamstack.pdf">
+              {" "}
+              (Book) Modern web development on the JAMstack
+            </a>
+          </li>
+          <li>
+            <a href="https://manuelpayan.com">
+              A simple guide of which is JAMstack
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lambrospetrou.com/articles/battle-of-jamstack-platforms-netlify-vercel-aws/">
+              JAMstack platforms overview
+            </a>
+          </li>
+          <li>
+            <a href="https://jamstack.org/">
+              A JAMstack guide, set of resources and much more
+            </a>
+          </li>
+          <li>
+            <a href="https://strapi.io/blog/strapi-online-meetup-4-recap">
+              (Webinar) Deploy a Next.js Blog Starter Using Strapi on Vercel
+            </a>
+          </li>
+        </ul>
       </Section>
     </Layout>
   );

@@ -4,6 +4,7 @@ import Date from "../../components/date";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styled from "styled-components";
 import { getPost, getPostList } from "lib/api";
+import ReactMarkdown from "react-markdown";
 
 const H1 = styled.h1`
   font-size: 2rem;
@@ -56,7 +57,8 @@ export default function Post({
             />
           </div>
         )}
-        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: postData.content }} /> */}
+        <ReactMarkdown source={postData.content} />
       </article>
     </Layout>
   );

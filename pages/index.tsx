@@ -62,6 +62,7 @@ const Home = ({
         </List>
       </Section>
       <Section>
+        <h2>Resources</h2>
         <p>{referPage}</p>
         <ul>
           <li>

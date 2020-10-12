@@ -22,15 +22,8 @@ const HeaderImg = styled.img`
   border-radius: 9999px;
 `;
 
-const Footer = styled.footer`
-  width: 100%;
-  margin: 0 auto;
-  height: 300px;
-`;
-
 const Layout = ({ children, home }: any) => {
   return (
-    <>
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
@@ -85,8 +78,7 @@ const Layout = ({ children, home }: any) => {
           </div>
         )}
       </div>
-      <Footer>Made with 💛 by Manuel Payán Cabrera</Footer>
-    </>
+      
   );
 };
 
